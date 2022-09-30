@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <main class="tabuleiro">
+    <div class="superior">
+      <div class="quadrado1" data-forma="a">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+      <div class="quadrado2" data-forma="b">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+      <div class="quadrado3" data-forma="c">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+    </div>
+    <div class="meio">
+      <div class="quadrado4" data-forma="d">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+      <div class="quadrado5" data-forma="e">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+      <div class="quadrado6" data-forma="f">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+    </div>
+    <div class="inferior">
+      <div class="quadrado7" data-forma="g">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+      <div class="quadrado8" data-forma="h">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+      <div class="quadrado9" data-forma="i">
+        <div class="barra"></div><span class="xis">x</span> <span class="bola">o</span>
+      </div>
+    </div>
+  </main>
+  <div class="info">
+    <p>Jogador 1 começa com <span class="selecao1"></span></p>
+    <p>Jogador 2 começa com <span class="selecao2"></span></p>
+    <p class="resultado"></p>
+  </div>
+  <footer>
+    <button class="footer reset">Novo Jogo</button>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+
+</html>

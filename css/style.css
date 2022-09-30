@@ -1,0 +1,390 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: url(/caderno3.png) center center no-repeat;
+  width: 100 vw;
+  height: 100 vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: Gloria Hallelujah;
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+}
+
+.tabuleiro {
+  margin-top: 150px;
+  grid-area: 1;
+  display: flex;
+}
+
+.superior {
+  display: inline-block;
+}
+
+[class*="quadrado"] {
+  overflow: hidden;
+  display: flex;
+  grid-column-start: initial;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.quadrado1 {
+  width: 200px;
+  height: 200px;
+  border-bottom: 15px solid black;
+}
+
+.quadrado2 {
+  width: 200px;
+  height: 200px;
+  border-bottom: 15px solid black;
+}
+.quadrado3 {
+  width: 200px;
+  height: 200px;
+}
+
+.meio {
+  display: inline-block;
+}
+
+.quadrado4 {
+  width: 200px;
+  height: 200px;
+  border-right: 10px solid black;
+  border-bottom: 15px solid black;
+  border-left: 15px solid black;
+}
+
+.quadrado5 {
+  width: 200px;
+  height: 200px;
+  border-right: 10px solid black;
+  border-bottom: 15px solid black;
+  border-left: 15px solid black;
+}
+.quadrado6 {
+  width: 200px;
+  height: 200px;
+  border-right: 10px solid black;
+  border-left: 15px solid black;
+}
+
+.inferior {
+  display: inline-block;
+}
+
+.quadrado7 {
+  width: 200px;
+  height: 200px;
+  border-left: 5px solid black;
+  border-bottom: 15px solid black;
+}
+
+.quadrado8 {
+  width: 200px;
+  height: 200px;
+  border-left: 5px solid black;
+  border-bottom: 15px solid black;
+}
+.quadrado9 {
+  width: 200px;
+  height: 200px;
+  border-left: 5px solid black;
+}
+
+.xis {
+  font-size: 15rem;
+  color: red;
+  display: none;
+}
+
+.bola {
+  display: none;
+  font-size: 15rem;
+  color: blue;
+}
+
+[class*="quadrado"].ativo-xis .xis {
+  display: block;
+}
+[class*="quadrado"].ativo-bola .bola {
+  display: block;
+}
+
+.reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 20px 30px;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  grid-column: 2;
+}
+
+button:hover {
+  background-color: gray;
+  opacity: 0.8;
+}
+
+footer {
+  grid-column: 2;
+  margin-right: 100px;
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  align-self: flex-end;
+  font-family: Gloria Hallelujah;
+}
+
+.selecao1 {
+  display: inline-flex;
+  font-size: 5rem;
+  color: red;
+  margin-bottom: 5px;
+}
+
+.selecao2 {
+  display: inline-flex;
+  font-size: 5rem;
+  color: blue;
+}
+
+.info {
+  grid-column: 2;
+  font-size: 3rem;
+  margin-top: 20px;
+  justify-content: center;
+  width: max-content;
+  margin-left: 100px;
+  display: inline-table;
+}
+.info span {
+  margin-left: 20px;
+}
+
+.resultado {
+  margin-top: 80px;
+  grid-column: 2;
+  font-size: 5rem;
+}
+
+span {
+  margin-top: -50px;
+}
+
+/* .barra {
+  content: "";
+  height: 30px;
+  width: 150%;
+  position: absolute;
+  background-color: green !important; */
+/* display: none; */
+/* rotate: -45deg; */
+
+/* } */
+
+@media (max-width: 1350px) {
+  [class*="quadrado"] {
+    width: 150px;
+    height: 150px;
+  }
+  .resultado {
+    font-size: 3rem;
+    margin-top: 15px;
+  }
+  .info {
+    font-size: 2rem;
+  }
+  .bola {
+    font-size: 10rem;
+  }
+  .xis {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  [class*="quadrado"] {
+    width: 120px;
+    height: 120px;
+  }
+  .resultado {
+    font-size: 2.5rem;
+    margin-top: 15px;
+  }
+  .info {
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+  .bola {
+    font-size: 10rem;
+  }
+  .xis {
+    font-size: 10rem;
+  }
+  footer {
+    margin-right: 50px;
+  }
+  .selecao1,
+  .selecao2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 960px) {
+  body {
+    width: 100 vw;
+    height: 100 vh;
+    background-image: url("/metade\ corrigido.png");
+    display: grid;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+  }
+  .tabuleiro {
+    justify-self: center;
+    margin-top: 50px;
+    justify-self: center;
+  }
+  [class*="quadrado"] {
+    width: 100px;
+    height: 100px;
+  }
+  .resultado {
+    position: fixed;
+    grid-column-start: auto;
+    font-size: 2rem;
+    margin-top: 45px;
+  }
+  .info {
+    margin-top: 80px;
+    grid-column-start: auto;
+    font-size: 1.5rem;
+  }
+  .bola {
+    font-size: 8rem;
+  }
+  .xis {
+    font-size: 8rem;
+  }
+  .selecao1,
+  .selecao2 {
+    max-width: max-content;
+    flex-wrap: wrap;
+    font-size: 3rem;
+  }
+  .selecao1 {
+    margin-bottom: 15px;
+  }
+  footer {
+    grid-column-start: auto;
+    margin-right: 80px;
+  }
+
+  button {
+    margin-bottom: 0px;
+    margin-top: 110px;
+    padding: 20px 10px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    height: 100vh;
+  }
+  [class*="quadrado"] {
+    width: 80px;
+    height: 80px;
+  }
+  .resultado {
+    font-size: 1.5rem;
+    margin-top: 95px;
+  }
+  .info {
+    margin-top: 60px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+  }
+  .bola {
+    font-size: 6rem;
+  }
+  .xis {
+    font-size: 6rem;
+  }
+  .selecao1,
+  .selecao2 {
+    font-size: 2rem;
+  }
+  .selecao1 {
+    margin-bottom: 20px;
+  }
+  footer {
+    margin-top: 80px;
+    margin-right: 0px;
+  }
+  button {
+    font-size: 1.5rem;
+  }
+  .quadrado1 {
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  .quadrado2 {
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+  .quadrado3 {
+    border-right: 5px solid black;
+  }
+
+  .quadrado4 {
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+  }
+
+  .quadrado5 {
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+  }
+  .quadrado6 {
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+  }
+
+  .quadrado7 {
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  .quadrado8 {
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+  .quadrado9 {
+    border-left: 5px solid black;
+  }
+}
